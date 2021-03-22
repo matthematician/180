@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-03-22T17:00:40-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="emphasis">Proof.</em> Let \(a,b,c\in\mathbb{Z}\) be arbitrarily chosen.</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Assumptions.</em> Suppose that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+a^2+b^2&amp;=c^2\tag{1.2.3}\\
+\text{but that both }a,b&amp; \text{ are odd}.\tag{1.2.4}
+\end{align}
+</div>
+<p data-braille="continuation">(See note <a class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Footnote 1.2.2"><sup> 2 </sup></a>.)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">By <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#def_parity" target="_blank">definition of odd</a>, there exist integers \(k,\ell\in\mathbb{Z}\) such that \(a=2k+1\) and \(b=2\ell+1\text{.}\)</p>
+<p>By <a class="xref" data-knowl="./knowl/ws12-assump1.html" title="Equation 1.2.3">(1.2.3)</a> we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+c^2 &amp;= a^2+b^2\\
+&amp;= (2k+1)^2 + (2\ell+1)^2\\
+&amp;=4k^2+4k+4\ell^2+4\ell+2\\
+&amp;=2\bigl[ 2(k^2+k+\ell^2+\ell) + 1 \bigr].
+\end{align*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">So on one hand, \(c^2\) is a perfect square. On the other, there exists an integer \(n = k^2+k+\ell^2+\ell\) so that \(c^2 = 2\bigl[ 2n + 1 \bigr]\text{.}\) Setting \(m = 2n+1\) we see that \(c^2 = 2m\) where \(m\) is an odd number.</p>
+<p>Thus we know three things about \(c^2\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+c^2 &amp; \text{ is a perfect square}\tag{1.2.5}\\
+c^2 &amp;= 2m \text{ is an even number...}\tag{1.2.6}\\
+&amp;\text{ ...and }m\text{ is odd. }\tag{1.2.7}
+\end{align}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">We proceed by cases.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p xmlns:svg="http://www.w3.org/2000/svg"><em class="emphasis">Case 1: If \(c\) is odd.</em> As we have shown previously, if \(c\) is odd then \(c^2\) is also odd. However this is a contradiction of <a class="xref" data-knowl="./knowl/cas1.html" title="Equation 1.2.5">(1.2.5)</a>, so this case cannot be sustained.</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Case 2: If \(c\) is even.</em> Then there exists an integer \(r\) such that \(c = 2r\text{.}\) But then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+c^2 &amp;= (2r)^2\\
+&amp;= 4\, r^2
+\end{align*}
+</div>
+<p data-braille="continuation">and <a class="xref" data-knowl="./knowl/cas2.html" title="Equation 1.2.6">(1.2.6)</a> implies that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2m = 4r^2.
+\end{equation*}
+</div>
+<p data-braille="continuation">Hence \(m = 2\, r^2\text{.}\) However, since \(r^2\) is an integer this implies that \(m\) is even, contradicting <a class="xref" data-knowl="./knowl/cas3.html" title="Equation 1.2.7">(1.2.7)</a>, so this case cannot be sustained.</p>
+</div>
+</div></div>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="emphasis">Conclusion:</em> Since our assumptions necessitate a contradiction, we conclude by way of contradiction that if \(a^2+b^2=c^2\) then \(a\) is even or \(b\) is even. \(\square\)</p>
+</div></body>
+</html>

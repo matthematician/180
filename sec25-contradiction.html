@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T15:47:42-04:00       *-->
+<!--*       on 2021-03-22T17:00:40-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -87,7 +87,179 @@ MathJax.Hub.Config({
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec25-contradiction"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Proof by Contradiction</span>
-</h2></section></div></main>
+</h2>
+<section class="worksheet" id="ws_contrad1"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">1.2.1</span> <span class="title">In-Class Practice (Part 1)</span>
+</h3>
+<p id="p-1">Use proof by contradiction (perhaps along with direct proof) to prove each statement below.</p>
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2">Suppose \(p\) is a non-zero rational number, and \(q\) is irrational. Prove that \(pq\) is irrational.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-3"><em class="emphasis">Assumptions:</em> Suppose that</p>
+<div class="displaymath">
+\begin{align}
+p\in\mathbb{Q} \text{ and } p\neq 0&amp; \text{ and }q\in\mathbb{R}\setminus\mathbb{Q},\label{a1}\tag{1.2.1}\\
+\text{ but that }&amp; pq\in\mathbb{Q}.\label{a2}\tag{1.2.2}
+\end{align}
+</div>
+<p id="p-4">By the <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#def_rational" target="_blank">definition of rational number</a>, the two assumptions above give the existence of integers \(j,k,\ell,m\in\mathbb{Z}\) with<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> \(j\neq 0\text{,}\) \(k\neq 0\text{,}\) and \(m\neq 0\text{,}\) for which</p>
+<div class="displaymath">
+\begin{equation*}
+p = \frac{j}{k} \qquad \text{ and } \qquad pq = \frac{\ell}{m}.
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><p id="p-5">Be sure you convince yourself why each of these three “not zero” statements is true!</p></div></div>
+<p id="p-6">Eliminating the \(p\) from the above equations we find that</p>
+<div class="displaymath">
+\begin{align*}
+\frac{j}{k}q &amp;= \frac{\ell}{m} &amp;&amp; \text{and solving for }q \text{ we see}\\
+q&amp;= \frac{k\ell}{jm}.
+\end{align*}
+</div>
+<p id="p-7">Since \(k,\ell\) are integers by assumption, their product \(x = k\ell\) is also an integer.</p>
+<p id="p-8">Also, since \(j,m\) are integers by assumption, their product \(y = jm\) is also an integer. What's more, since \(j\neq 0\) and \(m\neq 0\) we also know that \(y = jm \neq 0\) since the integers have the <a class="external" href="https://math.oer.lanecc.edu/orcca/section-solving-quadratic-equations-by-factoring.html#ePE" target="_blank">zero product property</a>.</p>
+<p id="p-9">Thus \(q = \frac{x}{y}\) where \(x,y\in\mathbb{Z}\) and \(y\neq 0\text{.}\) So by definition of rational number, \(q\in\mathbb{Q}\) is rational. This contradicts our assumption <a class="xref" data-knowl="./knowl/a1.html" title="Equation 1.2.1">(1.2.1)</a></p>
+<p id="p-10"><em class="emphasis">Conclusion:</em> Since our assumptions necessitate a contradiction, we conclude by way of contradiction that if \(p\) is rational and nonzero and \(q\) is irrational, then \(pq\) is irrational. \(\square\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-11">Suppose \(a,b,c\in\mathbb{Z}\text{.}\) If \(a^2+b^2=c^2\text{,}\) then \(a\) is even or \(b\) is even.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-12"><em class="emphasis">Proof.</em> Let \(a,b,c\in\mathbb{Z}\) be arbitrarily chosen.</p>
+<p id="p-13"><em class="emphasis">Assumptions.</em> Suppose that</p>
+<div class="displaymath">
+\begin{align}
+a^2+b^2&amp;=c^2\label{ws12-assump1}\tag{1.2.3}\\
+\text{but that both }a,b&amp; \text{ are odd}.\label{ws12-assump2}\tag{1.2.4}
+\end{align}
+</div>
+<p data-braille="continuation">(See note <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><p id="p-14">We've used <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#thm_demorgan" target="_blank">De Morgan's Laws</a> to negate the “or” into an “and”.</p></div></div>
+<p id="p-15">By <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#def_parity" target="_blank">definition of odd</a>, there exist integers \(k,\ell\in\mathbb{Z}\) such that \(a=2k+1\) and \(b=2\ell+1\text{.}\)</p>
+<p id="p-16">By <a class="xref" data-knowl="./knowl/ws12-assump1.html" title="Equation 1.2.3">(1.2.3)</a> we have</p>
+<div class="displaymath">
+\begin{align*}
+c^2 &amp;= a^2+b^2\\
+&amp;= (2k+1)^2 + (2\ell+1)^2\\
+&amp;=4k^2+4k+4\ell^2+4\ell+2\\
+&amp;=2\bigl[ 2(k^2+k+\ell^2+\ell) + 1 \bigr].
+\end{align*}
+</div>
+<p id="p-17">So on one hand, \(c^2\) is a perfect square. On the other, there exists an integer \(n = k^2+k+\ell^2+\ell\) so that \(c^2 = 2\bigl[ 2n + 1 \bigr]\text{.}\) Setting \(m = 2n+1\) we see that \(c^2 = 2m\) where \(m\) is an odd number.</p>
+<p id="p-18">Thus we know three things about \(c^2\text{:}\)</p>
+<div class="displaymath">
+\begin{align}
+c^2 &amp; \text{ is a perfect square}\label{cas1}\tag{1.2.5}\\
+c^2 &amp;= 2m \text{ is an even number...}\label{cas2}\tag{1.2.6}\\
+&amp;\text{ ...and }m\text{ is odd. }\label{cas3}\tag{1.2.7}
+\end{align}
+</div>
+<p id="p-19">We proceed by cases.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-20"><em class="emphasis">Case 1: If \(c\) is odd.</em> As we have shown previously, if \(c\) is odd then \(c^2\) is also odd. However this is a contradiction of <a class="xref" data-knowl="./knowl/cas1.html" title="Equation 1.2.5">(1.2.5)</a>, so this case cannot be sustained.</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-21"><em class="emphasis">Case 2: If \(c\) is even.</em> Then there exists an integer \(r\) such that \(c = 2r\text{.}\) But then</p>
+<div class="displaymath">
+\begin{align*}
+c^2 &amp;= (2r)^2\\
+&amp;= 4\, r^2
+\end{align*}
+</div>
+<p data-braille="continuation">and <a class="xref" data-knowl="./knowl/cas2.html" title="Equation 1.2.6">(1.2.6)</a> implies that</p>
+<div class="displaymath">
+\begin{equation*}
+2m = 4r^2.
+\end{equation*}
+</div>
+<p data-braille="continuation">Hence \(m = 2\, r^2\text{.}\) However, since \(r^2\) is an integer this implies that \(m\) is even, contradicting <a class="xref" data-knowl="./knowl/cas3.html" title="Equation 1.2.7">(1.2.7)</a>, so this case cannot be sustained.</p>
+</div>
+</div></div>
+<p id="p-22"><em class="emphasis">Conclusion:</em> Since our assumptions necessitate a contradiction, we conclude by way of contradiction that if \(a^2+b^2=c^2\) then \(a\) is even or \(b\) is even. \(\square\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-23">Prove that if \(x\in\mathbb{Z}\text{,}\) then \(4\nmid (x^2+2)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-24"><em class="emphasis">Assumptions:</em> Suppose that</p>
+<div class="displaymath">
+\begin{align}
+x&amp;\in \mathbb{Z}\label{w1}\tag{1.2.8}\\
+\text{but that } 4 &amp;\mid (x^2+2).\label{w2}\tag{1.2.9}
+\end{align}
+</div>
+<p id="p-25">By <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#def_congruent" target="_blank">definition of divisibility by 4</a>, statement <a class="xref" data-knowl="./knowl/w2.html" title="Equation 1.2.9">(1.2.9)</a> implies the existence of an integer \(n\in\mathbb{Z}\) so that \(x^2 + 2 = 4n\text{.}\)</p>
+<p id="p-26">Because we assumed \(x\) was an integer (<a class="xref" data-knowl="./knowl/w1.html" title="Equation 1.2.8">(1.2.8)</a>), we can investigate this assertion by cases, depending on the divisibility of \(x\) by 4.</p>
+<p id="p-27"><em class="emphasis">Case 1: If \(x\) is a multiple of 4.</em> Then there exists an integer \(a\in\mathbb{Z}\) so that \(x=4a\text{.}\) But then</p>
+<div class="displaymath">
+\begin{align*}
+x^2 + 2 &amp;= (4a)^2 + 2\\
+&amp;= 16a^2 + 2\\
+&amp;=4\bigl(4a^2\bigr) + 2
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(j=4a^2\) is an integer, we have \(x^2 + 2 = 4j + 2\text{.}\) Thus \((x^2+2)\) cannot be a multiple of \(4\text{,}\) since its remainder when divided by 4 is 2.</p>
+<p id="p-28"><em class="emphasis">Case 2: If \(x\) is one more than a multiple of 4.</em> Then there exists an integer \(b\in\mathbb{Z}\) so that \(x=4b+1\text{.}\) But then</p>
+<div class="displaymath">
+\begin{align*}
+x^2 + 2 &amp;= (4b+1)^2 + 2\\
+&amp;= 16b^2 + 8b +1  2\\
+&amp;=4\bigl(4b^2+2b\bigr) + 3
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(k=4b^2+2b\) is an integer, we have \(x^2 + 2 = 4k + 3\text{.}\) Thus \((x^2+2)\) cannot be a multiple of \(4\text{,}\) since its remainder when divided by 4 is 3.</p>
+<p id="p-29"><em class="emphasis">Case 3: If \(x\) is two more than a multiple of 4.</em> Then there exists an integer \(c\in\mathbb{Z}\) so that \(x=4c+2\text{.}\) But then</p>
+<div class="displaymath">
+\begin{align*}
+x^2 + 2 &amp;= (4c+2)^2 + 2\\
+&amp;= 16c^2 +16c + 4+ 2\\
+&amp;=4\bigl(4c^2+4c+1\bigr) + 2
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(\ell=4c^2+4c+1\) is an integer, we have \(x^2 + 2 = 4\ell + 2\text{.}\) Thus \((x^2+2)\) cannot be a multiple of \(4\text{,}\) since its remainder when divided by 4 is 2.</p>
+<p id="p-30"><em class="emphasis">Case 4: If \(x\) is three more than a multiple of 4.</em> Then there exists an integer \(d\in\mathbb{Z}\) so that \(x=4d+3\text{.}\) But then</p>
+<div class="displaymath">
+\begin{align*}
+x^2 + 2 &amp;= (4d+3)^2 + 2\\
+&amp;= 16d^2 + 24d + 9 + 2\\
+&amp;=4\bigl(4d^2+6d+2\bigr) + 3
+\end{align*}
+</div>
+<p data-braille="continuation">and since \(m=4d^2+6d+2\) is an integer, we have \(x^2 + 2 = 4m + 3\text{.}\) Thus \((x^2+2)\) cannot be a multiple of \(4\text{,}\) since its remainder when divided by 4 is 3.</p>
+<p id="p-31"><em class="emphasis">Conclusion:</em> Since our assumptions necessitate a contradiction, we conclude by way of contradiction that if \(x\in\mathbb{Z}\text{,}\) then \(4\nmid (x^2+2)\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-32">Suppose \(a,b\in\mathbb{Z}\) and that \(a\geq 2\text{.}\) Prove that \(a\nmid b\) or \(a\nmid (b+1)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-33">This result can be thought of as saying “The same natural number \(a\) cannot be a factor of two successive numbers \(b,b+1\text{,}\) unless \(a\) is equal to one.”</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-34"><em class="emphasis">Assumptions:</em> Suppose that</p>
+<div class="displaymath">
+\begin{align}
+a,b\in\mathbb{Z} &amp;\text{ and } a\geq 2,\label{x1}\tag{1.2.10}\\
+\text{but that }a\mid b&amp;\text{ and } a\mid (b+1).\label{x2}\tag{1.2.11}
+\end{align}
+</div>
+<p data-braille="continuation">(See Note <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a>.)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><p id="p-35">Again we have used <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#thm_demorgan" target="_blank">De Morgan's Laws</a> for the negation of the “or” into an “and”.</p></div></div>
+<p id="p-36">Using the <a class="external" href="https://matthematician.github.io/route401/sec-definitions.html#def_divides" target="_blank">defintion of divisibility by \(a\)</a>, by assumption <a class="xref" data-knowl="./knowl/x2.html" title="Equation 1.2.11">(1.2.11)</a> there exist integers \(n,m\in\mathbb{Z}\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+b = n\,a  \quad \text{ and also } \quad b+1 = m\, a.
+\end{equation*}
+</div>
+<p id="p-37">Eliminating the \(b\) from the above equations then shows that</p>
+<div class="displaymath">
+\begin{align}
+na + 1 &amp;= ma\tag{1.2.12}\\
+1 &amp;= (m-n)a.\label{x3}\tag{1.2.13}
+\end{align}
+</div>
+<p id="p-38">However, since \(m,n\) are integers by assumption, we know that \((m-n)\) is an integer. Furthermore, we have assumed that \(a\) is an integer (<a class="xref" data-knowl="./knowl/x1.html" title="Equation 1.2.10">(1.2.10)</a>).</p>
+<p id="p-39">The only integer solutions to \(xy = 1\) are \(x=y=1\) or \(x=y=-1\text{.}\) Thus <a class="xref" data-knowl="./knowl/x3.html" title="Equation 1.2.13">(1.2.13)</a> implies that either \(a=1\) or \(a=-1\text{.}\) Neither of these is compatible with the assumption <a class="xref" data-knowl="./knowl/x1.html" title="Equation 1.2.10">(1.2.10)</a> since we have assumed \(a \geq 2\text{.}\)</p>
+<p id="p-40"><em class="emphasis">Conclusion:</em> Since our assumptions necessitate a contradiction, we conclude by way of contradiction that if \(a,b\in\mathbb{Z}\) and \(a\geq 2\text{,}\) then \(a\nmid b\) or \(a\nmid (b+1)\text{.}\)</p>
+</div></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>
