@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-13T16:02:59-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Proving with Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\foo}{bar}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="transition.html"><span class="title">Transition to Advanced Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec33-collections.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch3-setsfunctions.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec33-collections.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch3-setsfunctions.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="ch2-proofs.html" data-scroll="ch2-proofs"><span class="codenumber">1</span> <span class="title">Proof Strategies</span></a><ul>
+<li><a href="sec24-cases.html" data-scroll="sec24-cases">Proof by Cases</a></li>
+<li><a href="sec25-contradiction.html" data-scroll="sec25-contradiction">Proof by Contradiction</a></li>
+<li><a href="sec26-induction.html" data-scroll="sec26-induction">Proof by Induction</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch3-setsfunctions.html" data-scroll="ch3-setsfunctions"><span class="codenumber">2</span> <span class="title">Sets, Functions, Relations</span></a><ul>
+<li><a href="sec31-sets.html" data-scroll="sec31-sets">Sets and Subsets</a></li>
+<li><a href="sec32-operations.html" data-scroll="sec32-operations">Set Operations</a></li>
+<li><a href="sec33-collections.html" data-scroll="sec33-collections">Indexed Collections</a></li>
+<li><a href="sec34-setproofs.html" data-scroll="sec34-setproofs" class="active">Proving with Sets</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec34-setproofs"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Proving with Sets</span>
+</h2>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-23" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/u9yfE2UXYsM?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+<article class="remark remark-like" id="warmup_setproof"><h6 class="heading">
+<span class="type">Warmup Exercise</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+</h6>
+<p id="p-162">Let \(A\) and \(B\) be arbitrary sets. Prove that</p>
+<div class="displaymath">
+\begin{equation*}
+A\cap B \subseteq A\cup B.
+\end{equation*}
+</div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-163">Follow the first Example in the video above.</p></div></div></article><section class="worksheet" id="ws-setproof"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">2.4.1</span> <span class="title">Practice with Using Set Definitions</span>
+</h3>
+<article class="objectives goal-like" id="objectives-1"><h6 class="heading"><span class="type">Objectives</span></h6>
+<ol class="lower-alpha">
+<li id="li-58"><p id="p-164">To translate between symbolic expressions and definitions of ideas in set theory and logic.</p></li>
+<li id="li-59"><p id="p-165">To outline the structure of a set-theoretic proof.</p></li>
+</ol></article><p id="p-166">Fill in the table below. In each case, you must either write an equivalent statement using the correct reasoning, or find the correct reasoning to justify why the statements are equivalent.</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Statement</td>
+<td class="l m b2 r0 l0 t0 lines">Is equivalent to...</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">Because of...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(x\in A\cap B\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of intersection</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(z\in A\) or \(z\in\overline{B\cup C}\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of union</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(y\in A - B\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set difference</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(k\not\in A\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set complement</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(n\in A-(B\cup C)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set difference</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\lnot(x\in A\cup B)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of union</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\lnot(n\in C \text{ and } n\in D)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">De Morgan's Law</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(y\in B\) and \(y\not\in (C\cup D)\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set complement</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(x\in\overline{B} - (A\cap C)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set difference</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(a\not\in (Y\cup Z)\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set complement</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(y\not\in A \; \wedge \; y\in B\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">De Morgan's Law</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(x\in A\cup (B\cap C)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(x\in A\text{,}\) or \(x\in B\) and \(x\in C\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(a\in \overline{C-D}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(a\not\in (C-D)\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(y\in A - \overline{B}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set difference and complement</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(x\in A\) or \(x\not\in B\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">De Morgan's Law</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(c\in A\cup \overline{B\cap C}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set union and complement</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(A\subseteq B \; \wedge\; B\subseteq A\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set equality</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(C\subseteq D\)</td>
+<td class="l m b0 r0 l0 t0 lines">for every \(x\text{,}\) \((x\in C \Rightarrow x\in D)\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(A\cup(B\cup D) = (A\cup B)\cup D\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of set equality</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(C \subset D\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">definition of proper subset</td>
+</tr>
+</table></figure><p id="p-167">In each box below, set up how to prove the given subset statement. You do not need to prove the statement, you just need to write down the necessary steps to prove it. The first row provides an example.</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.3<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">To prove...</td>
+<td class="l m b2 r0 l0 t0 lines">we will let...</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">and then show...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(A\subseteq B\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(x\in A\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(x\in B\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(C\subseteq F\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\((A\cap B)\subseteq (A\cup B)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\((C-D)\subseteq (C\cup D)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(X\subseteq \overline{A-B}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(Y\subseteq (A-D)\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></figure><p id="p-168">Now, fill in the table explaining how to show set equality. An example is given for you.</p>
+<figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.4<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">To prove...</td>
+<td class="l m b2 r0 l0 t0 lines">we must show two things:</td>
+<td class="l m b2 r0 l0 t0 lines">To prove the first part, we'll...</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">To prove the second part, we'll...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(A=B\)</td>
+<td class="l m b0 r0 l0 t0 lines">(1) \(A\subseteq B\) and (2) \(B\subseteq A\text{.}\)</td>
+<td class="l m b0 r0 l0 t0 lines">let \(x\in A\text{,}\) then show \(x\in B\text{.}\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">let \(y\in B\text{,}\) then show \(y\in A\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(C\cup B = A\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(A\cup B = B \cup A\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(A-B=B\cap \overline{A}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{C\cup D} = \overline{C} \cup \overline{D}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></figure></section></section></div></main>
+</div>
+</body>
+</html>
